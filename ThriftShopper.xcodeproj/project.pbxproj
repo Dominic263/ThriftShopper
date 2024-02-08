@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		494DB5312B753E56009A9535 /* ThiftShopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494DB5302B753E56009A9535 /* ThiftShopperApp.swift */; };
+		4936C50E2B75747400E19DAF /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 4936C50D2B75747400E19DAF /* App */; };
+		4936C5102B75753900E19DAF /* ThriftShopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */; };
 		494DB5332B753E56009A9535 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494DB5322B753E56009A9535 /* ContentView.swift */; };
 		494DB5352B753E5A009A9535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5342B753E5A009A9535 /* Assets.xcassets */; };
 		494DB5392B753E5A009A9535 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5382B753E5A009A9535 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		494DB52D2B753E56009A9535 /* ThiftShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThiftShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		494DB5302B753E56009A9535 /* ThiftShopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThiftShopperApp.swift; sourceTree = "<group>"; };
+		4919AC3D2B757193009B8B6E /* ThriftShopper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThriftShopper.entitlements; sourceTree = "<group>"; };
+		4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftShopperApp.swift; sourceTree = "<group>"; };
+		494DB52D2B753E56009A9535 /* ThriftShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThriftShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494DB5322B753E56009A9535 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		494DB5342B753E5A009A9535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		494DB5362B753E5A009A9535 /* ThiftShopper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThiftShopper.entitlements; sourceTree = "<group>"; };
 		494DB5382B753E5A009A9535 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		494DB53F2B75407E009A9535 /* shopper-ios-client */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "shopper-ios-client"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,38 +29,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4936C50E2B75747400E19DAF /* App in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4936C50C2B75747400E19DAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		494DB5242B753E56009A9535 = {
 			isa = PBXGroup;
 			children = (
-				494DB52F2B753E56009A9535 /* ThiftShopper */,
+				494DB53F2B75407E009A9535 /* shopper-ios-client */,
+				494DB52F2B753E56009A9535 /* ThriftShopper */,
 				494DB52E2B753E56009A9535 /* Products */,
+				4936C50C2B75747400E19DAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		494DB52E2B753E56009A9535 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				494DB52D2B753E56009A9535 /* ThiftShopper.app */,
+				494DB52D2B753E56009A9535 /* ThriftShopper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		494DB52F2B753E56009A9535 /* ThiftShopper */ = {
+		494DB52F2B753E56009A9535 /* ThriftShopper */ = {
 			isa = PBXGroup;
 			children = (
-				494DB5302B753E56009A9535 /* ThiftShopperApp.swift */,
 				494DB5322B753E56009A9535 /* ContentView.swift */,
+				4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */,
+				4919AC3D2B757193009B8B6E /* ThriftShopper.entitlements */,
 				494DB5342B753E5A009A9535 /* Assets.xcassets */,
-				494DB5362B753E5A009A9535 /* ThiftShopper.entitlements */,
 				494DB5372B753E5A009A9535 /* Preview Content */,
 			);
-			path = ThiftShopper;
+			path = ThriftShopper;
 			sourceTree = "<group>";
 		};
 		494DB5372B753E5A009A9535 /* Preview Content */ = {
@@ -72,9 +84,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		494DB52C2B753E56009A9535 /* ThiftShopper */ = {
+		494DB52C2B753E56009A9535 /* ThriftShopper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 494DB53C2B753E5A009A9535 /* Build configuration list for PBXNativeTarget "ThiftShopper" */;
+			buildConfigurationList = 494DB53C2B753E5A009A9535 /* Build configuration list for PBXNativeTarget "ThriftShopper" */;
 			buildPhases = (
 				494DB5292B753E56009A9535 /* Sources */,
 				494DB52A2B753E56009A9535 /* Frameworks */,
@@ -84,9 +96,12 @@
 			);
 			dependencies = (
 			);
-			name = ThiftShopper;
+			name = ThriftShopper;
+			packageProductDependencies = (
+				4936C50D2B75747400E19DAF /* App */,
+			);
 			productName = ThiftShopper;
-			productReference = 494DB52D2B753E56009A9535 /* ThiftShopper.app */;
+			productReference = 494DB52D2B753E56009A9535 /* ThriftShopper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 494DB5282B753E56009A9535 /* Build configuration list for PBXProject "ThiftShopper" */;
+			buildConfigurationList = 494DB5282B753E56009A9535 /* Build configuration list for PBXProject "ThriftShopper" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				494DB52C2B753E56009A9535 /* ThiftShopper */,
+				494DB52C2B753E56009A9535 /* ThriftShopper */,
 			);
 		};
 /* End PBXProject section */
@@ -139,8 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4936C5102B75753900E19DAF /* ThriftShopperApp.swift in Sources */,
 				494DB5332B753E56009A9535 /* ContentView.swift in Sources */,
-				494DB5312B753E56009A9535 /* ThiftShopperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +276,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ThiftShopper/ThiftShopper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ThriftShopper/ThriftShopper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ThiftShopper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ThriftShopper/Preview Content\"";
 				DEVELOPMENT_TEAM = DR869849C7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -284,7 +299,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.project.final.ThiftShopper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.final.ThriftShopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -299,10 +314,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ThiftShopper/ThiftShopper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ThriftShopper/ThriftShopper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ThiftShopper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ThriftShopper/Preview Content\"";
 				DEVELOPMENT_TEAM = DR869849C7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -322,7 +337,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.project.final.ThiftShopper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.final.ThriftShopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -335,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		494DB5282B753E56009A9535 /* Build configuration list for PBXProject "ThiftShopper" */ = {
+		494DB5282B753E56009A9535 /* Build configuration list for PBXProject "ThriftShopper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				494DB53A2B753E5A009A9535 /* Debug */,
@@ -344,7 +359,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		494DB53C2B753E5A009A9535 /* Build configuration list for PBXNativeTarget "ThiftShopper" */ = {
+		494DB53C2B753E5A009A9535 /* Build configuration list for PBXNativeTarget "ThriftShopper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				494DB53D2B753E5A009A9535 /* Debug */,
@@ -354,6 +369,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4936C50D2B75747400E19DAF /* App */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = App;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 494DB5252B753E56009A9535 /* Project object */;
 }
