@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4936C50E2B75747400E19DAF /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 4936C50D2B75747400E19DAF /* App */; };
 		4936C5102B75753900E19DAF /* ThriftShopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */; };
-		494DB5332B753E56009A9535 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494DB5322B753E56009A9535 /* ContentView.swift */; };
 		494DB5352B753E5A009A9535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5342B753E5A009A9535 /* Assets.xcassets */; };
 		494DB5392B753E5A009A9535 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5382B753E5A009A9535 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,7 +17,6 @@
 		4919AC3D2B757193009B8B6E /* ThriftShopper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThriftShopper.entitlements; sourceTree = "<group>"; };
 		4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftShopperApp.swift; sourceTree = "<group>"; };
 		494DB52D2B753E56009A9535 /* ThriftShopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThriftShopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		494DB5322B753E56009A9535 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		494DB5342B753E5A009A9535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494DB5382B753E5A009A9535 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		494DB53F2B75407E009A9535 /* shopper-ios-client */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "shopper-ios-client"; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 		494DB52F2B753E56009A9535 /* ThriftShopper */ = {
 			isa = PBXGroup;
 			children = (
-				494DB5322B753E56009A9535 /* ContentView.swift */,
 				4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */,
 				4919AC3D2B757193009B8B6E /* ThriftShopper.entitlements */,
 				494DB5342B753E5A009A9535 /* Assets.xcassets */,
@@ -155,7 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4936C5102B75753900E19DAF /* ThriftShopperApp.swift in Sources */,
-				494DB5332B753E56009A9535 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

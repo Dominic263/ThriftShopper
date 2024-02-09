@@ -7,12 +7,21 @@
 
 import SwiftUI
 import ComposableArchitecture
+import App
 
 @main
 struct ShopperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView(
+                store: Store(
+                    initialState: AppFeature.State(),
+                    reducer: {
+                        AppFeature()
+                            ._printChanges()
+                    }
+                )
+            )
         }
     }
 }

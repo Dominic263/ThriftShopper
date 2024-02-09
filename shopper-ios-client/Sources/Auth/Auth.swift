@@ -33,6 +33,8 @@ public struct AuthFeature: Reducer {
         }
     }
     
+    public init()  {}
+    
     @Dependency(\.httpClient) var httpClient
     @Dependency(\.continuousClock) var clock
     

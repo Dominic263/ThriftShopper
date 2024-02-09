@@ -1,9 +1,8 @@
 //
-//  File.swift
+//  AppFeature.swift
 //  
 //
 //  Created by DOMINIC NDONDO on 2/8/24.
-//
 
 import Foundation
 import ComposableArchitecture
@@ -17,11 +16,11 @@ public enum Tab {
 public struct AppFeature: Reducer {
     public struct State: Equatable {
         @BindingState public var selectedTab: Tab
-        init(selectedTab: Tab = .shopping) {
+        public init(selectedTab: Tab = .shopping) {
             self.selectedTab = selectedTab
         }
     }
-    
+    public init()  {}
     public enum Action: Equatable, BindableAction {
         case binding(BindingAction<State>)
         case changeSelectedTab(Tab)
