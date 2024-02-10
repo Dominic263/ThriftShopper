@@ -11,6 +11,7 @@
 		4936C5102B75753900E19DAF /* ThriftShopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */; };
 		494DB5352B753E5A009A9535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5342B753E5A009A9535 /* Assets.xcassets */; };
 		494DB5392B753E5A009A9535 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5382B753E5A009A9535 /* Preview Assets.xcassets */; };
+		498693BE2B7714B1001C7628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498693BD2B7714B1001C7628 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		494DB5342B753E5A009A9535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494DB5382B753E5A009A9535 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		494DB53F2B75407E009A9535 /* shopper-ios-client */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "shopper-ios-client"; sourceTree = "<group>"; };
+		498693BD2B7714B1001C7628 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ThriftShopper/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */,
 				4919AC3D2B757193009B8B6E /* ThriftShopper.entitlements */,
 				494DB5342B753E5A009A9535 /* Assets.xcassets */,
+				498693BD2B7714B1001C7628 /* LaunchScreen.storyboard */,
 				494DB5372B753E5A009A9535 /* Preview Content */,
 			);
 			path = ThriftShopper;
@@ -139,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498693BE2B7714B1001C7628 /* LaunchScreen.storyboard in Resources */,
 				494DB5392B753E5A009A9535 /* Preview Assets.xcassets in Resources */,
 				494DB5352B753E5A009A9535 /* Assets.xcassets in Resources */,
 			);
@@ -286,6 +290,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -324,6 +329,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
