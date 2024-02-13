@@ -25,6 +25,7 @@ let package = Package(
         .target(
             name: "App",
             dependencies: [
+                "Shopping",
                 "Auth",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
             ]),

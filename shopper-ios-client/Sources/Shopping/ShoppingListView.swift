@@ -1,20 +1,42 @@
 //
-//  SwiftUIView.swift
+//  ShoppingListView.swift
 //  
 //
 //  Created by DOMINIC NDONDO on 2/12/24.
 //
-
+import ComposableArchitecture
 import SwiftUI
 
-struct SwiftUIView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+public struct ShoppingListView: View {
+    let store: StoreOf<ShoppingListFeature>
+    public var body: some View {
+        WithViewStore(self.store, observe: {$0}) { viewStore in
+            List {
+                ForEach(viewStore.shoppingList) { item in
+                    GroceryItemView(groceryItem: item)
+                }
+                .onDelete(perform: { indexSet in
+                    viewStore.send(.deleteItems(
+                        indexSet: indexSet)
+                    )
+                })
+            }
+            .listStyle(PlainListStyle())
+            .padding(.vertical, 0)
+            
+        }
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct ShoppingListView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView()
+        ShoppingListView(
+            store: Store(
+                initialState: ShoppingListFeature.State(shoppingList: [.tomato, .meat, .cereal, .toothpaste, .rice]),
+                reducer: {
+                    ShoppingListFeature()
+                }
+            )
+        )
     }
 }
