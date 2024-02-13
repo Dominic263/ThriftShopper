@@ -1,8 +1,11 @@
 //
-//  SwiftUIView.swift
+//  AppView.swift
 //
 //  Created by DOMINIC NDONDO on 2/8/24.
 import ComposableArchitecture
+import Shopping
+import Calendar
+import Settings
 import SwiftUI
 
 public struct AppView: View {
@@ -14,20 +17,32 @@ public struct AppView: View {
     public var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             TabView(selection: viewStore.$selectedTab) {
-                //TODO: Implement screens for the shopping screen, calendar screen and settings screens.
-                Text("Shopping")
-                    .tabItem {
-                        Image(systemName: "cart")
-                    }
-                    .tag(Tab.shopping)
+                #warning("Need to update the views to match observation API's")
+                NavigationStack {
+                    ShoppingListView(store: self.store.scope(state: \.shoppingFeature, action: {.shopping($0)}))
+                        .navigationTitle("Shopping List")
+                        .toolbar {
+                            ToolbarItem {
+                                #warning("implement the add route")
+                                Button(action: {}) {
+                                    Image(systemName: "plus")
+                                }
+                            }
+                        }
+                }
+                .tabItem {
+                    Image(systemName: "cart")
+                }
+                .tag(Tab.shopping)
+                    
                 
-                Text("Calendar")
+                CalendarView(store: self.store.scope(state: \.calendar, action: {.calendar($0)}))
                     .tabItem {
                         Image(systemName: "calendar")
                     }
                     .tag(Tab.calendar)
                 
-                Text("Settings")
+                SettingsView(store: self.store.scope(state: \.settings, action: {.settings($0)}))
                     .tabItem {
                         Image(systemName: "gear")
                     }

@@ -10,7 +10,7 @@ import Foundation
 
 public struct GroceryFormFeature: Reducer {
     public struct State: Equatable {
-        @BindingState var item: GroceryItem
+        @BindingState public var item: GroceryItem
     }
     
     public enum Action: BindableAction {

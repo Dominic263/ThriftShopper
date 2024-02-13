@@ -11,6 +11,9 @@ import Foundation
 public struct ShoppingListFeature: Reducer {
     public struct State: Equatable {
         public var shoppingList: IdentifiedArrayOf<GroceryItem>
+        public init(shoppingList: IdentifiedArrayOf<GroceryItem> = []) {
+            self.shoppingList = shoppingList
+        }
     }
     
     public init() {}

@@ -5,31 +5,41 @@
 //  Created by DOMINIC NDONDO on 2/13/24.
 //
 import ComposableArchitecture
+import Models
 import SwiftUI
 
 public struct GroceryFormView: View {
-    let store: StoreOf<GroceryFormFeature>
+    public let store: StoreOf<GroceryFormFeature>
+    
+    public init(store: StoreOf<GroceryFormFeature>) {
+        self.store = store
+    }
+    
     public var body: some View {
         WithViewStore(self.store, observe: {$0}) { viewStore in
             Form {
                 TextField("Grocery Item", text: viewStore.$item.name)
-                TextField("Price", text: viewStore.$item.price.value)
+                HStack {
+                    Text("$")
+                    TextField("0.00", value: viewStore.$item.price, formatter: numberFormatter)
+                        .keyboardType(.decimalPad)
+                }
             }
         }
     }
+    
+    private let numberFormatter: NumberFormatter = {
+           let formatter = NumberFormatter()
+           formatter.numberStyle = .decimal
+           formatter.maximumFractionDigits = 2 // Set to the maximum number of decimal places you want
+           return formatter
+       }()
 }
 
-#warning("need better implementation of price in TextField")
-extension Double {
-    fileprivate var value: String {
-        get { String(self) }
-        set { self = Double(newValue) ?? 0.00}
-    }
-}
 
 struct GroceryFormView_Previews: PreviewProvider {
     static var previews: some View {
-        GroceryFormView(store: Store(initialState: GroceryFormFeature.State(item: .tomato),
+        GroceryFormView(store: Store(initialState: GroceryFormFeature.State(item: GroceryItem()),
         reducer: {
             GroceryFormFeature()
         }))

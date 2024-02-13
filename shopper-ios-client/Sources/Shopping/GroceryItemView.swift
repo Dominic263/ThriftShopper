@@ -8,7 +8,8 @@ import SwiftUI
 import Models
 
 public struct GroceryItemView: View {
-    let groceryItem: GroceryItem
+    public let groceryItem: GroceryItem
+    
     
     public var body: some View {
         VStack {
@@ -16,12 +17,17 @@ public struct GroceryItemView: View {
                 
                 Text(groceryItem.name)
                     .font(.headline)
-                    .frame(width: .infinity,alignment:.trailing)
-                    .padding(.horizontal)
+                    .frame(width: .infinity,alignment:.leading)
+                    .padding(.leading)
+                    
                 Spacer()
+                
+                Image(systemName: "dollarsign.circle")
+                        
                 Text(" \(groceryItem.price.formatted(.currency(code: "USD")))")
-                    .frame(width: .infinity,alignment: .trailing)
-                    .font(.headline)
+                        .frame(width: .infinity,alignment: .trailing)
+                        .font(.headline)
+                
                 Spacer()
             }
         }

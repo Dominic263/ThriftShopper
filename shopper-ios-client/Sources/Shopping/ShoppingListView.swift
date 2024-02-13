@@ -8,7 +8,10 @@ import ComposableArchitecture
 import SwiftUI
 
 public struct ShoppingListView: View {
-    let store: StoreOf<ShoppingListFeature>
+    public let store: StoreOf<ShoppingListFeature>
+    public init(store: StoreOf<ShoppingListFeature>) {
+        self.store = store
+    }
     public var body: some View {
         WithViewStore(self.store, observe: {$0}) { viewStore in
             List {

@@ -20,6 +20,11 @@ public struct GroceryItem: Equatable, Identifiable, Codable {
     public let id: Tagged<Self, UUID>
     public var name: String
     public var price: Double
+    public init(id: Tagged<Self, UUID> = .init(), name: String = "", price: Double = 0) {
+        self.id = id
+        self.name = name
+        self.price = price
+    }
 }
 
 extension GroceryItem {
