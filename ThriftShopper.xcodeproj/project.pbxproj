@@ -11,6 +11,9 @@
 		4936C5102B75753900E19DAF /* ThriftShopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */; };
 		494DB5352B753E5A009A9535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5342B753E5A009A9535 /* Assets.xcassets */; };
 		494DB5392B753E5A009A9535 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5382B753E5A009A9535 /* Preview Assets.xcassets */; };
+		495177EB2B7B263000CA1301 /* Tagged in Frameworks */ = {isa = PBXBuildFile; productRef = 495177EA2B7B263000CA1301 /* Tagged */; };
+		495177ED2B7B263000CA1301 /* TaggedMoney in Frameworks */ = {isa = PBXBuildFile; productRef = 495177EC2B7B263000CA1301 /* TaggedMoney */; };
+		495177EF2B7B263000CA1301 /* TaggedTime in Frameworks */ = {isa = PBXBuildFile; productRef = 495177EE2B7B263000CA1301 /* TaggedTime */; };
 		498693BE2B7714B1001C7628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498693BD2B7714B1001C7628 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +32,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495177EB2B7B263000CA1301 /* Tagged in Frameworks */,
+				495177EF2B7B263000CA1301 /* TaggedTime in Frameworks */,
 				4936C50E2B75747400E19DAF /* App in Frameworks */,
+				495177ED2B7B263000CA1301 /* TaggedMoney in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +105,9 @@
 			name = ThriftShopper;
 			packageProductDependencies = (
 				4936C50D2B75747400E19DAF /* App */,
+				495177EA2B7B263000CA1301 /* Tagged */,
+				495177EC2B7B263000CA1301 /* TaggedMoney */,
+				495177EE2B7B263000CA1301 /* TaggedTime */,
 			);
 			productName = ThiftShopper;
 			productReference = 494DB52D2B753E56009A9535 /* ThriftShopper.app */;
@@ -128,6 +137,9 @@
 				Base,
 			);
 			mainGroup = 494DB5242B753E56009A9535;
+			packageReferences = (
+				495177E92B7B263000CA1301 /* XCRemoteSwiftPackageReference "swift-tagged" */,
+			);
 			productRefGroup = 494DB52E2B753E56009A9535 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -372,10 +384,36 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		495177E92B7B263000CA1301 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-tagged.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		4936C50D2B75747400E19DAF /* App */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = App;
+		};
+		495177EA2B7B263000CA1301 /* Tagged */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 495177E92B7B263000CA1301 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = Tagged;
+		};
+		495177EC2B7B263000CA1301 /* TaggedMoney */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 495177E92B7B263000CA1301 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = TaggedMoney;
+		};
+		495177EE2B7B263000CA1301 /* TaggedTime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 495177E92B7B263000CA1301 /* XCRemoteSwiftPackageReference "swift-tagged" */;
+			productName = TaggedTime;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
