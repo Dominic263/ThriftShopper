@@ -13,9 +13,17 @@ public struct GroceryFormView: View {
         WithViewStore(self.store, observe: {$0}) { viewStore in
             Form {
                 TextField("Grocery Item", text: viewStore.$item.name)
-                //TextField("Price", text: viewStore.$item.price)
+                TextField("Price", text: viewStore.$item.price.value)
             }
         }
+    }
+}
+
+#warning("need better implementation of price in TextField")
+extension Double {
+    fileprivate var value: String {
+        get { String(self) }
+        set { self = Double(newValue) ?? 0.00}
     }
 }
 
