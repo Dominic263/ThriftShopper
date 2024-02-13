@@ -20,7 +20,9 @@ public struct AppFeature: Reducer {
             self.selectedTab = selectedTab
         }
     }
+    
     public init()  {}
+    
     public enum Action: Equatable, BindableAction {
         case binding(BindingAction<State>)
         case changeSelectedTab(Tab)
