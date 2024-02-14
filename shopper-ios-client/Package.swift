@@ -14,7 +14,8 @@ let package = Package(
         .library(name: "Models", targets: ["Models"]),
         .library(name: "Shopping", targets: ["Shopping"]),
         .library(name: "Calendar", targets: ["Calendar"]),
-        .library(name: "Settings", targets: ["Settings"])
+        .library(name: "Settings", targets: ["Settings"]),
+        .library(name: "GroceryItem", targets: ["GroceryItem"])
     ],
     dependencies: [
         // .package(url: /* package url */, from: "1.0.0"),
@@ -43,6 +44,12 @@ let package = Package(
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
             ]),
         .target(
+            name: "GroceryItem",
+            dependencies: [
+                "Models",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+            ]),
+        .target(
             name: "Settings",
             dependencies: [
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
@@ -67,6 +74,7 @@ let package = Package(
             name: "Shopping",
             dependencies: [
                 "Models",
+                "GroceryItem",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
                 .product(name: "Tagged", package: "swift-tagged")
             ]),

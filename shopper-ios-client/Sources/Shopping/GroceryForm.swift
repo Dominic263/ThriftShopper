@@ -11,9 +11,12 @@ import Foundation
 public struct GroceryFormFeature: Reducer {
     public struct State: Equatable {
         @BindingState public var item: GroceryItem
+        public init(item: GroceryItem) {
+            self.item = item
+        }
     }
     
-    public enum Action: BindableAction {
+    public enum Action: Equatable, BindableAction {
         case binding(BindingAction<State>)
     }
     
