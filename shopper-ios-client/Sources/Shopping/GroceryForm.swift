@@ -8,10 +8,13 @@ import ComposableArchitecture
 import Models
 import Foundation
 
-public struct GroceryFormFeature: Reducer {
+public struct GroceryForm: Reducer {
     public struct State: Equatable {
         @BindingState public var item: GroceryItem
-        public init(item: GroceryItem) {
+        
+        public init(
+            item: GroceryItem = .init(id: GroceryItem.ID(), name: "", price: 0, quantity: 0)
+        ) {
             self.item = item
         }
     }

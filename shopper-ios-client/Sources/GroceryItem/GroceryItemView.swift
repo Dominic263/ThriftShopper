@@ -3,57 +3,63 @@
 //  
 //
 //  Created by DOMINIC NDONDO on 2/12/24.
-//
+
 import ComposableArchitecture
 import SwiftUI
 import Models
+import CustomViews
 
+//Displays each Item in a shopping List
 public struct GroceryItemView: View {
-    public let store: StoreOf<GroceryItemFeature>
+    public let store: StoreOf<GroceryItemRow>
     
-    public init(store: StoreOf<GroceryItemFeature>) {
+    public init(store: StoreOf<GroceryItemRow>) {
         self.store = store
     }
     
     public var body: some View {
-        WithViewStore(self.store, observe: {$0}) { viewStore in
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
             
-            VStack {
-                HStack {
-                    HStack {
-                        TextField("Item", text: viewStore.$groceryItem.name)
-                            .font(.headline)
-                        Spacer()
-                    }
-                    .padding(.leading)
-                    .frame(width: 250.0)
+            HStack {
+                VStack {
+                    TextField("Item", text: viewStore.$groceryItem.name)
+                        .multilineTextAlignment(.leading)
+                        .font(.custom("Roboto", size: 20))
                     
-                    Spacer()
-                    HStack {
+                    HStack{
+                        StepperView(value: viewStore.$groceryItem.quantity)
+                            .buttonStyle(BorderedButtonStyle())
+                        
+                        Text(String(viewStore.groceryItem.quantity))
+                            .font(.custom("Roboto", size: 20))
+                            
                         Spacer()
-                        Image(systemName: "dollarsign.circle")
-                            .foregroundColor(.green)
                     }
-                    Spacer()
-                    
-                    HStack {
-                        Spacer()
-                        TextField("0.00", value: viewStore.$groceryItem.price, format: .currency(code: "US"))
-                    }
-                    .frame(width: 60.0)
-                    .padding(.trailing)
                     
                 }
+                .padding(.leading, 10.0)
+                
+                HStack {
+                    
+                    TextField("0.00", value: viewStore.$groceryItem.price, format: .currency(code: "US"))
+                        .font(.custom("Roboto", size: 20))
+                        .frame(width: 80)
+                        
+                    Text(String(format: "%.2f", viewStore.totalCost))
+                        .font(.custom("Roboto", size: 20))
+                        .frame(width: 80)
+                        
+                }
+                .padding(.trailing)
             }
-            .frame(height: 50)
         }
     }
 }
 
 struct GroceryItemView_Previews: PreviewProvider {
     static var previews: some View {
-        GroceryItemView(store: Store(initialState: GroceryItemFeature.State(), reducer: {
-            GroceryItemFeature()
+        GroceryItemView(store: Store(initialState: GroceryItemRow.State(groceryItem: .tomato), reducer: {
+            GroceryItemRow()
         }))
     }
 }
