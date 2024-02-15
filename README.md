@@ -1,3 +1,3 @@
 THRIFTSHOPPER APP
 
-Plan your grocery shopping, search prices and quality, and get deals, vouchers, and more!
+An app that helps to plan and schedule your grocery run, track and manage your spending, and even store your receipts for future reference.
