@@ -20,20 +20,7 @@ public struct ShoppingListView: View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             NavigationStack {
                 List {
-                    HStack {
-                        Text("ITEM")
-                            .padding(.leading)
-                            .font(.headline)
-                        Spacer()
-                        Text("PRICE/UNIT")
-                            .padding(.leading)
-                            .font(.headline)
-                        Spacer()
-                        Text("TOTAL")
-                            .font(.headline)
-                            .padding(.trailing)
-                    }
-                    
+                    ListHeadingView()
                     ForEachStore(self.store.scope(
                         state: \.groceryItemRows,
                         action: ShoppingListFeature.Action.groceryItemsAction(id:action:)),
@@ -52,14 +39,17 @@ public struct ShoppingListView: View {
                     VStack {
                         HStack {
                             Text("TOTAL")
+                                .font(.custom("Roboto", size: 20))
                                 .padding(.leading)
                             Spacer()
                             
                             Text("\(viewStore.total.formatted(.currency(code: "USD")))")
+                                .font(.custom("Roboto", size: 20))
                                 .padding(.trailing)
-                                .font(.headline)
+                                
                         }
                     }
+                    //TotalView(total: viewStore.$total)
                 }
                 .sheet(store: self.store.scope(state: \.$destination, action: { .destination($0) }), state: /ShoppingListFeature.Destination.State.addNewItem, action: ShoppingListFeature.Destination.Action.addNewItem, content: { store in
                     NavigationStack {
@@ -69,6 +59,12 @@ public struct ShoppingListView: View {
                                 ToolbarItem {
                                     Button(action: {viewStore.send(.confirmAddItem)}){
                                         Text("Add")
+                                    }
+                                }
+                                
+                                ToolbarItem {
+                                    Button(action: {viewStore.send(.confirmCancelAddItem)}){
+                                        Text("Cancel")
                                     }
                                 }
                             }
@@ -90,6 +86,8 @@ public struct ShoppingListView: View {
         }
     }
 }
+
+
 
 struct ShoppingListView_Previews: PreviewProvider {
     static var previews: some View {

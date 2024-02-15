@@ -59,6 +59,7 @@ public struct ShoppingListFeature: Reducer {
         case deleteItems(indexSet: IndexSet)
         case addItemButtomTapped
         case confirmAddItem
+        case confirmCancelAddItem
         case destination(PresentationAction<Destination.Action>)
         case groceryItemsAction(id: GroceryItemRow.State.ID, action: GroceryItemRow.Action)
     }
@@ -66,6 +67,9 @@ public struct ShoppingListFeature: Reducer {
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
+            case .confirmCancelAddItem:
+                state.destination = nil
+                return .none
             case .destination:
                 return .none
             case .confirmAddItem:
