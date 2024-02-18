@@ -21,13 +21,13 @@ public enum Tab {
 public struct AppFeature: Reducer {
     public struct State: Equatable {
         @BindingState public var selectedTab: Tab
-        public var shoppingFeature: ShoppingListFeature.State
+        //public var shoppingFeature: ShoppingListDetail.State
         public var calendar: CalendarFeature.State = .init()
         public var settings: SettingsFeature.State = .init()
         
-        public init(selectedTab: Tab = .shopping, shoppingFeature: ShoppingListFeature.State) {
+        public init(selectedTab: Tab = .shopping) {
             self.selectedTab = selectedTab
-            self.shoppingFeature = shoppingFeature
+            //self.shoppingFeature = shoppingFeature
         }
     }
     
@@ -36,7 +36,7 @@ public struct AppFeature: Reducer {
     public enum Action: Equatable, BindableAction {
         case binding(BindingAction<State>)
         case changeSelectedTab(Tab)
-        case shopping(ShoppingListFeature.Action)
+        //case shopping(ShoppingListDetail.Action)
         case calendar(CalendarFeature.Action)
         case settings(SettingsFeature.Action)
     }
@@ -47,8 +47,8 @@ public struct AppFeature: Reducer {
         Reduce { state, action in
             switch action {
 
-            case .shopping:
-                return .none
+           // case .shopping:
+           //     return .none
             case .binding:
                 return .none
             case .changeSelectedTab(let tab):
@@ -56,10 +56,12 @@ public struct AppFeature: Reducer {
                 return .none
             }
         }
-        
+        /*
         Scope(state: \.shoppingFeature, action: /Action.shopping) {
-            ShoppingListFeature()
+            ShoppingListDetail()
         }
+         
+         */
         Scope(state: \.calendar, action: /Action.calendar) {
             CalendarFeature()
         }

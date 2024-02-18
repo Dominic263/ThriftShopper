@@ -19,7 +19,7 @@ public struct AppView: View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             TabView(selection: viewStore.$selectedTab) {
                 
-                
+                /*
                 ShoppingListView(
                     store: self.store.scope(
                         state: \.shoppingFeature,
@@ -30,7 +30,7 @@ public struct AppView: View {
                     Image(systemName: "cart")
                 }
                 .tag(Tab.shopping)
-                
+                */
                 
                 CalendarView(
                     store: self.store.scope(
@@ -57,11 +57,9 @@ public struct AppView: View {
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
         AppView(
-            store: Store(
-                initialState: AppFeature.State(shoppingFeature: .init(groceryItemRows: .mock)),
-                reducer: {
-                    AppFeature()
-                }
+            store: Store(initialState: AppFeature.State(), reducer: {
+                AppFeature()
+            }
             )
         )
     }

@@ -15,7 +15,7 @@ struct ShopperApp: App {
         WindowGroup {
             AppView(
                 store: Store(
-                    initialState: AppFeature.State(shoppingFeature: .init(groceryItemRows: .mock)),
+                    initialState: AppFeature.State(),
                     reducer: {
                         AppFeature()
                     }

@@ -20,7 +20,7 @@ let package = Package(
     ],
     dependencies: [
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", from: "1.5.0"),
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", branch: "main"),
         .package(url: "https://github.com/pointfreeco/swift-tagged.git", branch: "main")
         
     ],

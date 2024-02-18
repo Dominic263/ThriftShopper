@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490A5CF62B81A6FF0081B19B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 490A5CF52B81A6FF0081B19B /* ComposableArchitecture */; };
 		4936C50E2B75747400E19DAF /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 4936C50D2B75747400E19DAF /* App */; };
 		4936C5102B75753900E19DAF /* ThriftShopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4936C50F2B75753900E19DAF /* ThriftShopperApp.swift */; };
 		494DB5352B753E5A009A9535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DB5342B753E5A009A9535 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490A5CF62B81A6FF0081B19B /* ComposableArchitecture in Frameworks */,
 				495177EB2B7B263000CA1301 /* Tagged in Frameworks */,
 				495177EF2B7B263000CA1301 /* TaggedTime in Frameworks */,
 				4936C50E2B75747400E19DAF /* App in Frameworks */,
@@ -52,10 +54,10 @@
 		494DB5242B753E56009A9535 = {
 			isa = PBXGroup;
 			children = (
+				4936C50C2B75747400E19DAF /* Frameworks */,
+				494DB52E2B753E56009A9535 /* Products */,
 				494DB53F2B75407E009A9535 /* shopper-ios-client */,
 				494DB52F2B753E56009A9535 /* ThriftShopper */,
-				494DB52E2B753E56009A9535 /* Products */,
-				4936C50C2B75747400E19DAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +110,7 @@
 				495177EA2B7B263000CA1301 /* Tagged */,
 				495177EC2B7B263000CA1301 /* TaggedMoney */,
 				495177EE2B7B263000CA1301 /* TaggedTime */,
+				490A5CF52B81A6FF0081B19B /* ComposableArchitecture */,
 			);
 			productName = ThiftShopper;
 			productReference = 494DB52D2B753E56009A9535 /* ThriftShopper.app */;
@@ -139,6 +142,7 @@
 			mainGroup = 494DB5242B753E56009A9535;
 			packageReferences = (
 				495177E92B7B263000CA1301 /* XCRemoteSwiftPackageReference "swift-tagged" */,
+				490A5CF22B818CE60081B19B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 494DB52E2B753E56009A9535 /* Products */;
 			projectDirPath = "";
@@ -385,6 +389,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		490A5CF22B818CE60081B19B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		495177E92B7B263000CA1301 /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-tagged.git";
@@ -396,6 +408,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		490A5CF52B81A6FF0081B19B /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 490A5CF22B818CE60081B19B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		4936C50D2B75747400E19DAF /* App */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = App;
